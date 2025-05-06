@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
     <link rel="stylesheet" href="styles.css">
     <script src="checkAuth.js"></script>
     <script src="main.js" defer></script>
 </head>
 <body>
-    
+    <form id="login-form">
+        <input type="text" id="login-username" placeholder="Username">
+        <input type="text" id="login-password" placeholder="Password">
+        <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="register.html">Sign up here</a></p>
+
+    <div id="user-feedback"></div>
 </body>
 </html>
