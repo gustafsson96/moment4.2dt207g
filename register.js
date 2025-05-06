@@ -1,16 +1,16 @@
 "use strict";
 
-document.getElementById("login-form").addEventListener("submit", loginUser);
+document.getElementById("signup-form").addEventListener("submit", registerUser);
 
 // Replace with actual url
-const url ="https://moment4dt207g-aa8u.onrender.com/api/login";
+const url = "https://moment4dt207g-aa8u.onrender.com/api/register";
 
-// Login user
-async function loginUser(e) {
+// Register (signup)
+async function registerUser(e) {
     e.preventDefault();
 
-    const usernameInput = document.getElementById("login-username").value;
-    const passwordInput = document.getElementById("login-password").value;
+    const usernameInput = document.getElementById("signup-username").value;
+    const passwordInput = document.getElementById("signup-password").value;
 
     if (!usernameInput || !passwordInput) {
         console.log("Please enter both username and password");
@@ -37,10 +37,10 @@ async function loginUser(e) {
             window.location.href = "funfacts.html";
             console.log(data);
         } else {
-            console.log("Login failed: Invalid username or password");
+            console.log("Registration failed: Invalid username or password");
         }
 
     } catch (error) {
-        console.error("An error occurred during login:", error);
+        console.error("An error occurred during registration:", error);
     }
 }
