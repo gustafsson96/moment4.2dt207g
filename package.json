@@ -1,7 +1,7 @@
 {
   "name": "moment4.2dt207g",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
