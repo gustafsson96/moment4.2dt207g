@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fun Facts</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="checkAuth.js"></script>
     <script src="funfacts.js" defer></script>
 </head>
-<body>
-    <button id="logout-btn">Logout</button>
+
+<body class="funfacts-background">
     <h1>Welcome :-)</h1>
-    <p>You have accessed the secret portal.</p>
-    <p>Here are some fun facts for you:</p>
-    <ul id="funfacts-list"></ul>
+    <div class="funfacts-container">
+        <p>You have accessed the secret portal.</p>
+        <p>Here are some fun facts for you:</p>
+        <ul id="funfacts-list"></ul>
+        <div class="btn-wrapper">
+            <button id="logout-btn">Logout</button>
+        </div>
+    </div>
 </body>
+
 </html>
