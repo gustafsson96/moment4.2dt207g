@@ -35,7 +35,7 @@ async function registerUser(e) {
             const data = await resp.json();
             localStorage.setItem("token", data.token);
             window.location.href = "funfacts.html";
-            console.log(data);
+            console.log(data.token);
         } else {
             console.log("Registration failed: Invalid username or password");
         }
