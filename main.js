@@ -2,7 +2,6 @@
 
 document.getElementById("login-form").addEventListener("submit", loginUser);
 
-// Replace with actual url
 const url ="https://moment4dt207g-aa8u.onrender.com/api/login";
 
 // Login user
@@ -13,7 +12,7 @@ async function loginUser(e) {
     const passwordInput = document.getElementById("login-password").value;
 
     if (!usernameInput || !passwordInput) {
-        console.log("Please enter both username and password");
+        showFeedback("Please enter both username and password");
         return;
     }
 
@@ -35,12 +34,14 @@ async function loginUser(e) {
             const data = await resp.json();
             localStorage.setItem("token", data.token);
             window.location.href = "funfacts.html";
-            console.log(data);
         } else {
-            console.log("Login failed: Invalid username or password");
+            const errorData = await resp.json();
+            const errorMessage = errorData.message || errorData.error || "Login failed";
+            showFeedback(errorMessage);
         }
 
     } catch (error) {
-        console.error("An error occurred during login:", error);
+        showFeedback("An error occurred during login. Please try again.");
+        console.error(error);
     }
 }
