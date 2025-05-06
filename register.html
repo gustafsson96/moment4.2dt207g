@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +9,18 @@
     <script src="checkAuth.js"></script>
     <script src="register.js" defer></script>
 </head>
-<body>
-    <form id="signup-form">
-        <input type="text" id="signup-username" placeholder="Username">
-        <input type="text" id="signup-password" placeholder="Password">
-        <button type="submit">Sign up</button>
-        <p>Already have an account? <a href="index.html">Login here</a></p>
 
+<body>
+    <h1>Sign up</h1>
+    <div class="form-container">
+        <form id="signup-form">
+            <input type="text" id="signup-username" placeholder="Username">
+            <input type="text" id="signup-password" placeholder="Password">
+            <button type="submit">Sign up</button>
+        </form>
         <div id="user-feedback"></div>
-    </form>
+        <p>Already have an account? <a href="index.html">Login here</a></p>
+    </div>
 </body>
+
 </html>
