@@ -3,7 +3,7 @@ const list = document.getElementById("funfacts-list");
 const token = localStorage.getItem("token");
 
 if (!token) {
-    list.innerHTML = "<li>You must be logged in to view fun facts.</li>";
+    window.location.href = "index.html";
 } else {
     fetch("https://moment4dt207g-aa8u.onrender.com/api/protected", {
         headers: {
